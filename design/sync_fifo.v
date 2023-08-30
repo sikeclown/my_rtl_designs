@@ -19,9 +19,6 @@ always @(*) begin
     if (rd_en && !empty) begin
         rd=rd_ptr+'d1;
     end
-    else if (rd_en && empty) begin
-        rd='b0;
-    end
     else begin
         rd=rd_ptr;
     end
@@ -43,9 +40,6 @@ sync_dualport_ram r1(data_in, clk, rst, wr_en, rd_en, wr_ptr, rd_ptr, data_out);
 always @(*) begin
     if (wr_en && !full) begin
         wr=wr_ptr+'d1;
-    end
-    else if (wr_en && full) begin
-        wr='b0;
     end
     else begin
         wr=wr_ptr;
