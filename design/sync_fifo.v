@@ -39,7 +39,7 @@ always @(posedge clk) begin
     end
 end
 
-sync_dualport_ram r1(data_in, clk, rst, wr_en, rd_en, wr_ptr[addr_size-1:0], rd_ptr[addr_size-1:0], data_out);
+sync_dualport_ram r1(data_in, clk, rst, wr_en && !f, rd_en && !e, wr_ptr[addr_size-1:0], rd_ptr[addr_size-1:0], data_out);
 
 //WRITE SIDE
 always @(*) begin
