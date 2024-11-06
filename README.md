@@ -36,13 +36,13 @@ Performs Galois Field multiplication on a 128 bit input(in "TOP" module) & "H"
 
 # Example Picture of TOP module (AES-GCM)
 ![image](https://github.com/user-attachments/assets/4ca8e434-ce0a-48ad-8ca4-a42bab4b17f4)
-> Ek is AES block cypher(128 bit)
-> GFH is Galois field multiplier applied in H
-> H is Ek(128’b 0)
-> incr is add32
-> AAD additional data
-> TAG is Authentication TAG
-> C* is the Block cyphertext
+> Ek is AES block cypher(128 bit).
+> GFH is Galois field multiplier applied in H.
+> H is Ek(128’b 0).
+> incr is add32.
+> AAD additional data.
+> TAG is Authentication TAG.
+> C* is the Block cyphertext.
 
 ![image](https://github.com/user-attachments/assets/95caa70f-24e1-44ef-8227-cbe101536983)
 
